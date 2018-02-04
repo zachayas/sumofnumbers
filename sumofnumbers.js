@@ -1,5 +1,7 @@
 /**
  * Created by Zac Hayshida
+ * First Attempt DNF
+ * Second Attempt: 24:18
  */
 
 function sumFor(list) {
@@ -27,17 +29,16 @@ console.log(sumWhile([1, 2, 3, 4, 5]));
 function sumRecursion(list) {
   if (list.length === 0) {
     return 0;
-  } else {
-    return list[0] + sumRecursion(list.slice(1, list.length));
   }
+  return list[0] + sumRecursion(list.slice(1, list.length));
 }
 
 console.log(sumRecursion([1, 2, 3, 4, 5]));
 
 function sumTheSimpleWay(list) {
-  return _.reduce(list, function (memo, num) {
+  return _.reduce(list, function (memo,num) {
     return memo + num;
-  }, 0);
+  });
 }
 
 console.log(sumTheSimpleWay([1, 2, 3, 4, 5]));
